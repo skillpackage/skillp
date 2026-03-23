@@ -263,7 +263,7 @@ export function parseSource(input: string): ParsedSource {
     };
   }
 
-  // Generic git host URL: https://git.woa.com/owner/repo (any host with owner/repo path)
+  // Generic git host URL: https://example.com/owner/repo (any host with owner/repo path)
   // Catches preview links (no .git suffix) from non-GitHub/GitLab hosts.
   // Must come before the well-known check to avoid misclassifying git repos.
   const normalized = normalizeUrl(input);

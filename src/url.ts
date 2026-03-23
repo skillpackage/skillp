@@ -17,11 +17,11 @@ export type SourceType = 'git.woa' | 'github' | 'gitlab' | 'other';
  * Parse any git source URL into a normalized {host, owner, repo} structure.
  *
  * Supported formats:
- *   git@git.woa.com:chong/chong-skills.git
- *   https://git.woa.com/chong/chong-skills.git
- *   https://git.woa.com/chong/chong-skills       (preview link, no .git)
- *   https://github.com/owner/repo
  *   git@github.com:owner/repo.git
+ *   https://github.com/owner/repo
+ *   https://github.com/owner/repo.git
+ *   git@gitlab.com:owner/repo.git
+ *   git@custom-host.com:owner/repo.git            (any git host)
  *
  * Returns null if the URL cannot be parsed.
  */
@@ -65,7 +65,7 @@ export function normalizeUrl(input: string): NormalizedUrl | null {
 
 /**
  * Construct an SSH URL from a normalized URL.
- * e.g. git@git.woa.com:chong/chong-skills.git
+ * e.g. git@github.com:anthropics/skills.git
  */
 export function toSshUrl(n: NormalizedUrl): string {
   return `git@${n.host}:${n.owner}/${n.repo}.git`;
@@ -73,7 +73,7 @@ export function toSshUrl(n: NormalizedUrl): string {
 
 /**
  * Construct an HTTPS URL from a normalized URL.
- * e.g. https://git.woa.com/chong/chong-skills.git
+ * e.g. https://github.com/anthropics/skills.git
  */
 export function toHttpsUrl(n: NormalizedUrl): string {
   return `https://${n.host}/${n.owner}/${n.repo}.git`;

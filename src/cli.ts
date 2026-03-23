@@ -71,7 +71,7 @@ function showBanner(): void {
     `  ${DIM}$${RESET} ${TEXT}skillp remove ${DIM}<name>${RESET}       ${DIM}Remove an installed skill${RESET}`
   );
   console.log();
-  console.log(`${DIM}try:${RESET} skillp add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra -y`);
+  console.log(`${DIM}try:${RESET} skillp add anthropics/skills --all`);
   console.log();
 }
 
@@ -107,10 +107,11 @@ ${BOLD}Options:${RESET}
   --version, -v     Show version number
 
 ${BOLD}Examples:${RESET}
-  ${DIM}$${RESET} skillp add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra -y
+  ${DIM}$${RESET} skillp add anthropics/skills --all
+  ${DIM}$${RESET} skillp add anthropics/skills --skill web-design-guidelines -y
   ${DIM}$${RESET} skillp install
   ${DIM}$${RESET} skillp update --all -y
-  ${DIM}$${RESET} skillp remove iwiki-ultra
+  ${DIM}$${RESET} skillp remove web-design-guidelines
 `);
 }
 
