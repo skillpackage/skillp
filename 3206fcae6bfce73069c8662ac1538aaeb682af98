@@ -1,0 +1,23 @@
+README.md
+  d9043149b859e31d 8,11,14,21,24,27,30,33,36,64,67,70,73,76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "3206fcae6bfce73069c8662ac1538aaeb682af98",
+  "prompts": {
+    "d9043149b859e31d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b675e163-83c8-45a6-bdea-8850c5251acd",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "easonruan <easonruan@tencent.com>",
+      "messages": [],
+      "total_additions": 14,
+      "total_deletions": 14,
+      "accepted_lines": 14,
+      "overriden_lines": 0
+    }
+  }
+}
