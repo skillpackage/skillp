@@ -20,4 +20,8 @@ if ! command -v bun &> /dev/null; then
     echo "bun installed successfully."
 fi
 
-exec bunx skillp "$@"
+if [ -t 0 ]; then
+    exec bunx skillp "$@"
+else
+    exec bunx skillp "$@" < /dev/tty
+fi
