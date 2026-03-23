@@ -1,0 +1,23 @@
+bash/install.sh
+  d9043149b859e31d 23-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "b1be356ded5c806a9c9d902e8e3978b89aae4e67",
+  "prompts": {
+    "d9043149b859e31d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b675e163-83c8-45a6-bdea-8850c5251acd",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "easonruan <easonruan@tencent.com>",
+      "messages": [],
+      "total_additions": 5,
+      "total_deletions": 1,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    }
+  }
+}
