@@ -1,0 +1,23 @@
+README.md
+  2f87944c5b38753b 3,5,7-16,19,21-23,26,28-36,38,41-44,47,49,52,55,57,60-63,65,67,69-71,73,75,78-82,85,87,104,107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "f8c4a064bceace2e050c9dd99e330d1386cf5df5",
+  "prompts": {
+    "2f87944c5b38753b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e7f48ea5-d03c-4afe-9226-9494d172614a",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "easonruan <easonruan@tencent.com>",
+      "messages": [],
+      "total_additions": 62,
+      "total_deletions": 42,
+      "accepted_lines": 62,
+      "overriden_lines": 0
+    }
+  }
+}
