@@ -1,23 +1,23 @@
 # AGENTS.md
 
-This file provides guidance to AI coding agents working on the `skilladd` CLI codebase.
+This file provides guidance to AI coding agents working on the `skillp` CLI codebase.
 
 ## Project Overview
 
-`skilladd` is a full SKILL package manager for AI agent skills. It manages skill dependencies via `skills.json`, tracks versions via `skills-lock.json`, and creates symlinks for multiple agent runtimes.
+`skillp` is a full SKILL package manager for AI agent skills. It manages skill dependencies via `skills.json`, tracks versions via `skills-lock.json`, and creates symlinks for multiple agent runtimes.
 
 ## Commands
 
 | Command                    | Description                                              |
 | -------------------------- | -------------------------------------------------------- |
-| `skilladd`                 | Show banner                                              |
-| `skilladd add <source>`    | Add skills from git repos, URLs, or local paths          |
-| `skilladd install`         | Restore symlinks from skills.json (no network needed)    |
-| `skilladd update <name>`   | Update a skill to latest version from its source         |
-| `skilladd update --all`    | Update all skills                                        |
-| `skilladd remove <name>`   | Remove an installed skill                                |
+| `skillp`                   | Show banner                                              |
+| `skillp add <source>`      | Add skills from git repos, URLs, or local paths          |
+| `skillp install`           | Restore symlinks from skills.json (no network needed)    |
+| `skillp update <name>`     | Update a skill to latest version from its source         |
+| `skillp update --all`      | Update all skills                                        |
+| `skillp remove <name>`     | Remove an installed skill                                |
 
-Aliases: `skilladd a` for `add`, `skilladd i` for `install`, `skilladd up` for `update`, `skilladd rm` for `remove`.
+Aliases: `skillp a` for `add`, `skillp i` for `install`, `skillp up` for `update`, `skillp rm` for `remove`.
 
 ## Key Files
 
@@ -64,7 +64,7 @@ src/
     └── wellknown.ts
 
 bash/
-└── skilladd.sh          # One-liner installer (auto-installs bun)
+└── install.sh           # One-liner installer (auto-installs bun)
 ```
 
 ## Development

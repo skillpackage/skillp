@@ -1,5 +1,5 @@
 /**
- * `skilladd install` command.
+ * `skillp install` command.
  *
  * Restores symlinks for all agents declared in skills.json.
  * No network required — works entirely from the local vendored files in .agents/skills/.
@@ -134,7 +134,7 @@ export async function runInstall(options: InstallOptions = {}): Promise<void> {
   const canonicalDir = join(cwd, UNIVERSAL_SKILLS_DIR);
   if (!existsSync(canonicalDir)) {
     p.log.warn('No skills installed yet (.agents/skills/ not found).');
-    p.log.info(`Run ${pc.cyan('skilladd add <source>')} to add skills first.`);
+    p.log.info(`Run ${pc.cyan('skillp add <source>')} to add skills first.`);
     p.outro(pc.dim('Nothing to do.'));
     return;
   }
@@ -169,7 +169,7 @@ export async function runInstall(options: InstallOptions = {}): Promise<void> {
       p.log.message(`  ${pc.red('!')} ${name}`);
     }
     p.log.info(
-      `Run ${pc.cyan('skilladd update --all')} to fetch missing skills from their sources.`
+      `Run ${pc.cyan('skillp update --all')} to fetch missing skills from their sources.`
     );
   }
 

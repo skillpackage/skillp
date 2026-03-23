@@ -59,25 +59,25 @@ function showBanner(): void {
   console.log(`${DIM}Agent skill package manager${RESET}`);
   console.log();
   console.log(
-    `  ${DIM}$${RESET} ${TEXT}skilladd add ${DIM}<source>${RESET}        ${DIM}Add a skill from a git repo${RESET}`
+    `  ${DIM}$${RESET} ${TEXT}skillp add ${DIM}<source>${RESET}        ${DIM}Add a skill from a git repo${RESET}`
   );
   console.log(
-    `  ${DIM}$${RESET} ${TEXT}skilladd install${RESET}             ${DIM}Restore symlinks from skills.json${RESET}`
+    `  ${DIM}$${RESET} ${TEXT}skillp install${RESET}             ${DIM}Restore symlinks from skills.json${RESET}`
   );
   console.log(
-    `  ${DIM}$${RESET} ${TEXT}skilladd update ${DIM}[name]${RESET}          ${DIM}Update skills to latest (default: all)${RESET}`
+    `  ${DIM}$${RESET} ${TEXT}skillp update ${DIM}[name]${RESET}          ${DIM}Update skills to latest (default: all)${RESET}`
   );
   console.log(
-    `  ${DIM}$${RESET} ${TEXT}skilladd remove ${DIM}<name>${RESET}       ${DIM}Remove an installed skill${RESET}`
+    `  ${DIM}$${RESET} ${TEXT}skillp remove ${DIM}<name>${RESET}       ${DIM}Remove an installed skill${RESET}`
   );
   console.log();
-  console.log(`${DIM}try:${RESET} skilladd add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra -y`);
+  console.log(`${DIM}try:${RESET} skillp add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra -y`);
   console.log();
 }
 
 function showHelp(): void {
   console.log(`
-${BOLD}Usage:${RESET} skilladd <command> [options]
+${BOLD}Usage:${RESET} skillp <command> [options]
 
 ${BOLD}Commands:${RESET}
   add <source>           Add a skill from a git repo or URL
@@ -107,10 +107,10 @@ ${BOLD}Options:${RESET}
   --version, -v     Show version number
 
 ${BOLD}Examples:${RESET}
-  ${DIM}$${RESET} skilladd add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra -y
-  ${DIM}$${RESET} skilladd install
-  ${DIM}$${RESET} skilladd update --all -y
-  ${DIM}$${RESET} skilladd remove iwiki-ultra
+  ${DIM}$${RESET} skillp add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra -y
+  ${DIM}$${RESET} skillp install
+  ${DIM}$${RESET} skillp update --all -y
+  ${DIM}$${RESET} skillp remove iwiki-ultra
 `);
 }
 
@@ -167,7 +167,7 @@ async function main(): Promise<void> {
       break;
     default:
       console.log(`Unknown command: ${command}`);
-      console.log(`Run ${BOLD}skilladd --help${RESET} for usage.`);
+      console.log(`Run ${BOLD}skillp --help${RESET} for usage.`);
   }
 }
 

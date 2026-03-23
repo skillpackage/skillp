@@ -1,5 +1,5 @@
 /**
- * `skilladd update <name>` command.
+ * `skillp update <name>` command.
  *
  * Updates installed skills to the latest version from their source.
  * Reads skills.json + skills-lock.json, clones the latest, compares commits,
@@ -48,7 +48,7 @@ export async function runUpdate(names: string[], options: UpdateOptions = {}): P
   const skillsJson = await readSkillsJson(cwd);
   if (!skillsJson || Object.keys(skillsJson.skills).length === 0) {
     p.log.warn('No skills.json found or no skills declared.');
-    p.log.info(`Run ${pc.cyan('skilladd add <source>')} to add skills first.`);
+    p.log.info(`Run ${pc.cyan('skillp add <source>')} to add skills first.`);
     p.outro(pc.dim('Nothing to update.'));
     return;
   }

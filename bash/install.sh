@@ -1,11 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-# skilladd installer — ensures bun is available, then forwards all args to bunx skilladd.
+# skillp installer — ensures bun is available, then forwards all args to bunx skillp.
 #
 # Usage:
-#   wget -qO- https://skills.example.com/install.sh | bash -s -- add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra
-#   curl -fsSL https://skills.example.com/install.sh | bash -s -- add git@git.woa.com:chong/chong-skills.git --skill iwiki-ultra
+#   curl -fsSL https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add git@github.com:owner/repo.git --skill my-skill
+#   wget -qO- https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add git@github.com:owner/repo.git --skill my-skill
 
 if ! command -v bun &> /dev/null; then
     echo "bun not found, installing..."
@@ -20,4 +20,4 @@ if ! command -v bun &> /dev/null; then
     echo "bun installed successfully."
 fi
 
-exec bunx skilladd "$@"
+exec bunx skillp "$@"

@@ -1,5 +1,5 @@
 /**
- * `skilladd remove <name>` command.
+ * `skillp remove <name>` command.
  *
  * Removes an installed skill:
  *  1. Delete .agents/skills/<name>/
@@ -28,7 +28,7 @@ export async function runRemove(names: string[], options: RemoveOptions = {}): P
 
   if (names.length === 0) {
     p.log.error('Specify at least one skill name to remove.');
-    p.log.info(`Usage: ${pc.cyan('skilladd remove <name>')}`);
+    p.log.info(`Usage: ${pc.cyan('skillp remove <name>')}`);
     process.exit(1);
   }
 

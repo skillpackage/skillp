@@ -1,33 +1,39 @@
-# skilladd
+# skillp
 
 Add agent skills to your project.
 
 ## Install
 
 ```bash
-npx skilladd add vercel-labs/agent-skills
+npx skillp add vercel-labs/agent-skills
+```
+
+### One-liner (auto-installs bun)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add vercel-labs/agent-skills
 ```
 
 ## Source Formats
 
 ```bash
 # GitHub shorthand (owner/repo)
-npx skilladd add vercel-labs/agent-skills
+npx skillp add vercel-labs/agent-skills
 
 # Full GitHub URL
-npx skilladd add https://github.com/vercel-labs/agent-skills
+npx skillp add https://github.com/vercel-labs/agent-skills
 
 # Direct path to a skill in a repo
-npx skilladd add https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+npx skillp add https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
 
 # GitLab URL
-npx skilladd add https://gitlab.com/org/repo
+npx skillp add https://gitlab.com/org/repo
 
 # Any git URL
-npx skilladd add git@github.com:vercel-labs/agent-skills.git
+npx skillp add git@github.com:vercel-labs/agent-skills.git
 
 # Local path
-npx skilladd add ./my-local-skills
+npx skillp add ./my-local-skills
 ```
 
 ## Options
@@ -55,19 +61,19 @@ npx skilladd add ./my-local-skills
 
 ```bash
 # List skills in a repository
-npx skilladd add vercel-labs/agent-skills --list
+npx skillp add vercel-labs/agent-skills --list
 
 # Install specific skills
-npx skilladd add vercel-labs/agent-skills --skill frontend-design
+npx skillp add vercel-labs/agent-skills --skill frontend-design
 
 # Install to specific agents
-npx skilladd add vercel-labs/agent-skills -a claude-code -a codex
+npx skillp add vercel-labs/agent-skills -a claude-code -a codex
 
 # Non-interactive installation
-npx skilladd add vercel-labs/agent-skills --skill frontend-design -g -a claude-code -y
+npx skillp add vercel-labs/agent-skills --skill frontend-design -g -a claude-code -y
 
 # Install all skills from a repo to all agents
-npx skilladd add vercel-labs/agent-skills --all
+npx skillp add vercel-labs/agent-skills --all
 ```
 
 ## License

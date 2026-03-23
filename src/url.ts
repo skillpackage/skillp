@@ -1,5 +1,5 @@
 /**
- * URL normalization utilities for skilladd.
+ * URL normalization utilities for skillp.
  *
  * Parses SSH, HTTPS, and preview-link formats into a canonical {host, owner, repo}
  * structure, then constructs SSH or HTTPS URLs as needed.
