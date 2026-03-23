@@ -1,0 +1,25 @@
+src/add.ts
+  7cd924bc7cdcb0cf 814-826
+README.md
+  7cd924bc7cdcb0cf 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "8892af440254949a42b726dc05442cfb1efbf394",
+  "prompts": {
+    "7cd924bc7cdcb0cf": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "086fcbd7-fd7d-421c-ad36-bf3499bade23",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "easonruan <easonruan@tencent.com>",
+      "messages": [],
+      "total_additions": 14,
+      "total_deletions": 1,
+      "accepted_lines": 14,
+      "overriden_lines": 0
+    }
+  }
+}
