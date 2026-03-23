@@ -5,35 +5,35 @@ Add agent skills to your project.
 ## Install
 
 ```bash
-npx skillp add vercel-labs/agent-skills
+curl -fsSL https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add https://github.com/anthropics/skills
 ```
 
-### One-liner (auto-installs bun)
+or via bunx / npx:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add vercel-labs/agent-skills
+bunx skillp add https://github.com/anthropics/skills
 ```
 
 ## Source Formats
 
 ```bash
 # GitHub shorthand (owner/repo)
-npx skillp add vercel-labs/agent-skills
+bunx skillp add anthropics/skills
 
 # Full GitHub URL
-npx skillp add https://github.com/vercel-labs/agent-skills
+bunx skillp add https://github.com/anthropics/skills
 
 # Direct path to a skill in a repo
-npx skillp add https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+bunx skillp add https://github.com/anthropics/skills/tree/main/skills/web-design-guidelines
 
 # GitLab URL
-npx skillp add https://gitlab.com/org/repo
+bunx skillp add https://gitlab.com/org/repo
 
 # Any git URL
-npx skillp add git@github.com:vercel-labs/agent-skills.git
+bunx skillp add git@github.com:anthropics/skills.git
 
 # Local path
-npx skillp add ./my-local-skills
+bunx skillp add ./my-local-skills
 ```
 
 ## Options
@@ -61,19 +61,19 @@ npx skillp add ./my-local-skills
 
 ```bash
 # List skills in a repository
-npx skillp add vercel-labs/agent-skills --list
+bunx skillp add anthropics/skills --list
 
 # Install specific skills
-npx skillp add vercel-labs/agent-skills --skill frontend-design
+bunx skillp add anthropics/skills --skill frontend-design
 
 # Install to specific agents
-npx skillp add vercel-labs/agent-skills -a claude-code -a codex
+bunx skillp add anthropics/skills -a claude-code -a codex
 
 # Non-interactive installation
-npx skillp add vercel-labs/agent-skills --skill frontend-design -g -a claude-code -y
+bunx skillp add anthropics/skills --skill frontend-design -g -a claude-code -y
 
 # Install all skills from a repo to all agents
-npx skillp add vercel-labs/agent-skills --all
+bunx skillp add anthropics/skills --all
 ```
 
 ## License
