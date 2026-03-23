@@ -23,5 +23,5 @@ fi
 if [ -t 0 ]; then
     exec bunx skillp "$@"
 else
-    exec bunx skillp "$@" < /dev/tty
+    exec bunx skillp "$@" -y
 fi
