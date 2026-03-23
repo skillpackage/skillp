@@ -5,7 +5,7 @@ Add agent skills to your project.
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add https://github.com/anthropics/skills
+curl -fsSL https://raw.githubusercontent.com/skillpackage/skillp/main/bash/install.sh | bash -s -- add https://github.com/anthropics/skills --all
 ```
 
 or via bunx / npx:

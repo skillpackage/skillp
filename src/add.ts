@@ -811,6 +811,19 @@ export async function runAdd(args: string[], options: AddOptions = {}): Promise<
     options.yes = true;
   }
 
+  // Non-TTY fallback: when stdin is not a terminal (e.g. curl | bash),
+  // interactive prompts will fail. Auto-enable non-interactive defaults
+  // while preserving any explicit CLI options the user provided.
+  if (!process.stdin.isTTY) {
+    options.yes = true;
+    if (!options.skill || options.skill.length === 0) {
+      options.skill = ['*'];
+    }
+    if (!options.agent || options.agent.length === 0) {
+      options.agent = ['*'];
+    }
+  }
+
   console.log();
   p.intro(pc.bgCyan(pc.black(' skills ')));
 
