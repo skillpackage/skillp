@@ -1,0 +1,27 @@
+src/url.ts
+  7cd924bc7cdcb0cf 21-24,68,76
+src/cli.ts
+  7cd924bc7cdcb0cf 74,110-111,114
+src/source-parser.ts
+  7cd924bc7cdcb0cf 266
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "21f5c621fe367b081b0167725d966bb27fe9b689",
+  "prompts": {
+    "7cd924bc7cdcb0cf": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "086fcbd7-fd7d-421c-ad36-bf3499bade23",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "easonruan <easonruan@tencent.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 10,
+      "accepted_lines": 11,
+      "overriden_lines": 0
+    }
+  }
+}
