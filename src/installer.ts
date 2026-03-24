@@ -374,7 +374,7 @@ const isExcluded = (name: string, isDirectory: boolean = false): boolean => {
   return EXCLUDE_FILE_PATTERNS.some((p) => p.test(name));
 };
 
-async function copyDirectory(src: string, dest: string): Promise<void> {
+export async function copyDirectory(src: string, dest: string): Promise<void> {
   await mkdir(dest, { recursive: true });
 
   const entries = await readdir(src, { withFileTypes: true });

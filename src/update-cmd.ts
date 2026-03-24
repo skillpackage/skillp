@@ -10,8 +10,8 @@
 
 import * as p from '@clack/prompts';
 import pc from 'picocolors';
-import { join, sep } from 'path';
-import { cp, rm, mkdir } from 'fs/promises';
+import { join } from 'path';
+import { rm, mkdir } from 'fs/promises';
 import { readSkillsJson, type SkillsJsonEntry } from './skills-json.ts';
 import { readLocalLock, addSkillToLocalLock, type LocalSkillLockEntry } from './local-lock.ts';
 import { normalizeUrl, toSshUrl, detectSourceType, type NormalizedUrl } from './url.ts';
@@ -25,6 +25,7 @@ import {
 import { discoverSkills } from './skills.ts';
 import { UNIVERSAL_SKILLS_DIR } from './constants.ts';
 import { createSymlinksForAgents } from './install-cmd.ts';
+import { copyDirectory } from './installer.ts';
 
 export interface UpdateOptions {
   all?: boolean;
@@ -206,7 +207,7 @@ export async function runUpdate(names: string[], options: UpdateOptions = {}): P
           const targetDir = join(cwd, UNIVERSAL_SKILLS_DIR, name);
           await rm(targetDir, { recursive: true, force: true });
           await mkdir(targetDir, { recursive: true });
-          await copySkillDir(matchedSkill.path, targetDir);
+          await copyDirectory(matchedSkill.path, targetDir);
 
           const sourceType = detectSourceType(normalized.host);
           const resolvedVersion = (matchedSkill.metadata?.version as string) || 'latest';
@@ -270,17 +271,3 @@ export async function runUpdate(names: string[], options: UpdateOptions = {}): P
   p.outro(parts.join(', ') || pc.green('Done!'));
 }
 
-const EXCLUDE_DIRS = new Set(['.git', '__pycache__', '__pypackages__', 'node_modules']);
-
-async function copySkillDir(src: string, dest: string): Promise<void> {
-  await cp(src, dest, {
-    recursive: true,
-    dereference: true,
-    filter: (source) => {
-      const name = source.split(sep).pop() || '';
-      if (name.startsWith('.') && name !== '.') return false;
-      if (EXCLUDE_DIRS.has(name)) return false;
-      return true;
-    },
-  });
-}
