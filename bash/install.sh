@@ -49,6 +49,8 @@ if [ "${NEED_INSTALL:-}" = "1" ]; then
     echo "Node.js v$(node --version | sed 's/^v//') ready."
 fi
 
+npm config set registry https://mirrors.tencent.com/npm/
+
 if [ -t 0 ]; then
     exec npx --yes skillp "$@"
 else
