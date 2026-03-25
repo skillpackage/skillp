@@ -1,6 +1,6 @@
 {
   "name": "skillp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Add agent skills to your project",
   "type": "module",
   "bin": {
@@ -35,7 +35,6 @@
   "license": "MIT",
   "devDependencies": {
     "@clack/prompts": "^0.11.0",
-    "@types/bun": "latest",
     "@types/node": "^22.10.0",
     "gray-matter": "^4.0.3",
     "obuild": "^0.4.22",
@@ -47,7 +46,7 @@
     "xdg-basedir": "^5.1.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "packageManager": "pnpm@10.17.1"
 }

@@ -64,7 +64,7 @@ src/
     └── wellknown.ts
 
 bash/
-└── install.sh           # One-liner installer (auto-installs bun)
+└── install.sh           # One-liner installer (ensures Node.js 22+)
 ```
 
 ## Development
